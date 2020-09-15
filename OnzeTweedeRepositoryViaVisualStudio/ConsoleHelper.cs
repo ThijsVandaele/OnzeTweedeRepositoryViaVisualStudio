@@ -16,20 +16,20 @@ namespace OnzeTweedeRepositoryViaVisualStudio
             return integer;
         }
 
-        public static int GetInteger(List<int> allowedValues)
+        public static float GetFloat()
         {
-            if (!int.TryParse(Console.ReadLine(), out int integer) && !allowedValues.Contains(integer))
+            if (!float.TryParse(Console.ReadLine(), out float f))
             {
-                Console.WriteLine("Foute invoer, geef een integer getal");
+                Console.WriteLine("Foute invoer, geef een float getal");
             }
 
-            return integer;
+            return f;
         }
 
         public static void PrintMenuWithTitle(Dictionary<int, string> menuItems, string title)
         {
-            PrintTitle(title);
-            PrintMenu(menuItems);
+            PrintTitle(title); // Print titel
+            PrintMenu(menuItems); // Print menu items
         }
 
         public static void PrintMenu(Dictionary<int, string> menuItems)
