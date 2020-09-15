@@ -25,6 +25,16 @@ namespace OnzeTweedeRepositoryViaVisualStudio
 
             return f;
         }
+        
+        public static float GetDecimal()
+        {
+            if (!decimal.TryParse(Console.ReadLine(), out decimal d))
+            {
+                Console.WriteLine("Foute invoer, geef een decimal getal");
+            }
+
+            return d;
+        }
 
         public static void PrintMenuWithTitle(Dictionary<int, string> menuItems, string title)
         {
